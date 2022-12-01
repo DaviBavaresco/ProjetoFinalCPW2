@@ -40,6 +40,22 @@ var score = 0;
 var fly = new Audio();
 var scor = new Audio();
 
+
+
+
+document.addEventListener("keydown",moveUp);
+
+function moveUp(){
+    // quando for clicado a gravidade vai ser igual na nasa, inversa    
+    gravity = -6.0;
+    fly.play();
+
+    setTimeout(function() {
+        gravity = gravity_backup;
+        
+    },80);
+};
+
 function draw(){
     //desenho a primeira imagem e informo aonde ela vai ficar, x=0 y=0
     ctx.drawImage(bg,0,0);
@@ -48,7 +64,7 @@ function draw(){
 
     var pd = ctx.drawImage(padre,bX,bY);
 
-    // para que o padre continue caindo, ele começa no y 150, se não ouvesse está variavel ele iria se manter no 150, mas com ela, ele fica no 150, depois 152 para sempre se movimentar
+    // para que o padre continue caindo, ele começa no y 150, se não ouvesse está variavel ele iria se manter no 150, mas com ela, ele fica no 150, depois 152 para sempre se movimenta
     bY +=gravity;
 
     console.log(bY)
