@@ -10,9 +10,38 @@
             font-family:"Flappy";
             src: url("Fonte/flappy.ttf");
         }
+        #game_over{
+            top: 180px;
+            left: 25px;
+            padding-top: 10px;
+            border-radius: 10px;
+            box-shadow: 2px 1px 12px black;
+            font-family: Flappy;
+            font-size: 40px;
+            color: black;
+            width: 250px;
+            height: 100px;
+            background-color: white;
+            position: absolute;
+            text-align: center;
+            display: none;
+
+        };
     </style>
 </head>
 <body>
+    <div id="game_over"> 
+        FIM DE JOGO
+        <br>
+        pts: <span id="pontos_detail">0</span>
+        <br>
+        record: <span id="record">0</span>
+        
+        <br>
+        <button id="btn_again">
+            JOGAR NOVAMENTE
+        </button>
+    </div>
     <canvas id="stage" width="288" height="512"></canvas>
     <script src="Jogo.js"></script>
     
