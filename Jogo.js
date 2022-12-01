@@ -41,7 +41,22 @@ var fly = new Audio();
 var scor = new Audio();
 
 function draw(){
+    //desenho a primeira imagem e informo aonde ela vai ficar, x=0 y=0
     ctx.drawImage(bg,0,0);
+    //desenhor o chão, para criar a variavel y, pego a altura total do fundo, e diminuo pelo tamanho do chão, então o chão vai ficar perfeitamente grudado no chão e não vai roubar parte do desenho
+    ctx.drawImage(fg,0,stage.height-fg.height);
+
+    var pd = ctx.drawImage(padre,bX,bY);
+
+    // para que o padre continue caindo, ele começa no y 150, se não ouvesse está variavel ele iria se manter no 150, mas com ela, ele fica no 150, depois 152 para sempre se movimentar
+    bY +=gravity;
+
+    console.log(bY)
+    requestAnimationFrame(draw);
+};
+
+window.onload = function(){
+    draw();
 };
 
 
