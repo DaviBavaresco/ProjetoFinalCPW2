@@ -21,4 +21,27 @@ pipeNorth.src = "IMG/pipeNorth.png";
 pipeSouth.src = "IMG/pipeSouth.png";
 
 // começo a criar as ações do jogo
+// altura entre canos
+var gap = 85; 
+var constant ;
+//posição do padre
+var bX = 10;
+var bY = 150;
+
+//gravidade
+var gravity = 2.0;
+var gravity_backup = gravity;
+
+//variavel dos pontos
+var score = 0;
+
+// crio os sons
+
+var fly = new Audio();
+var scor = new Audio();
+
+function draw(){
+    ctx.drawImage(bg,0,0);
+};
+
 
