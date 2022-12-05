@@ -22,7 +22,7 @@ pipeSouth.src = "IMG/pipeSouth.png";
 
 // começo a criar as ações do jogo
 // altura entre canos
-var gap = 85; 
+var gap = 185; 
 var constant ;
 //posição do padre
 var bX = 10;
@@ -128,7 +128,7 @@ function draw(){
         score++;
         scor.play();
         bestScore = Math.max(bestScore,score);
-        localStorage.bestScore=bestScore;
+        
     }
 } 
     //desenhor o chão, para criar a variavel y, pego a altura total do fundo, e diminuo pelo tamanho do chão, então o chão vai ficar perfeitamente grudado no chão e não vai roubar parte do desenho
@@ -139,7 +139,7 @@ function draw(){
     // para que o padre continue caindo, ele começa no y 150, se não ouvesse está variavel ele iria se manter no 150, mas com ela, ele fica no 150, depois 152 para sempre se movimenta
     bY +=gravity;
 
-    console.log(bY)
+    
 
 // acho o meio da tela para mostrar o pontos
     var width_canvas = (stage.width/2) - 10;
