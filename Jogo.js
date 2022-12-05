@@ -22,7 +22,7 @@ pipeSouth.src = "IMG/pipeSouth.png";
 
 // começo a criar as ações do jogo
 // altura entre canos
-var gap = 185; 
+var gap = 85; 
 var constant ;
 //posição do padre
 var bX = 10;
