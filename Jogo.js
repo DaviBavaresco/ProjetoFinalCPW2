@@ -42,6 +42,8 @@ var fly = new Audio();
 var scor = new Audio();
 const Lose = new Audio();
 Lose.src = "SOM/Lose.mp3";
+fly.src = "SOM/fly.mp3";
+scor.src = "SOM/score.mp3"
 
 var continua = true;
 
@@ -133,7 +135,7 @@ function draw(){
 
     if(pipe[i].x == 5){
         score++;
-        Lose.play();
+        scor.play();
         bestScore = Math.max(bestScore,score);
         
     }
