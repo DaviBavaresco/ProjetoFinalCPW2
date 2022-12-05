@@ -40,6 +40,8 @@ let bestScore = 0;
 
 var fly = new Audio();
 var scor = new Audio();
+const Lose = new Audio();
+Lose.src = "SOM/Lose.mp3";
 
 var continua = true;
 
@@ -119,14 +121,19 @@ function draw(){
         && (bY <= pipe[i].y+ pipeNorth.height || bY + padre.height >= pipe[i].y+constant)
         || bY + padre.height >= stage.height - fg.height )
         {
+            
+            
             game_over();
+
+            
+            
         }
 
     
 
     if(pipe[i].x == 5){
         score++;
-        scor.play();
+        Lose.play();
         bestScore = Math.max(bestScore,score);
         
     }
