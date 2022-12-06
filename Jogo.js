@@ -22,7 +22,7 @@ pipeSouth.src = "IMG/pipeSouth.png";
 
 // começo a criar as ações do jogo
 // altura entre canos
-var gap = 185; 
+var gap = 285; 
 var constant ;
 //posição do padre
 var bX = 10;
@@ -35,6 +35,7 @@ var gravity_backup = gravity;
 //variavel dos pontos
 var score = 0;
 let bestScore = 0;
+
 
 // crio os sons
 
@@ -70,7 +71,8 @@ function game_over(){
 continua= false;
 document.getElementById("pontos_detail").innerText = score;
 document.getElementById("game_over").style = "display: inline";
-document.getElementById("record").innerText = bestScore;
+let best = localStorage.getItem("bestScore");
+document.getElementById("record").innerText = best;
 gravity = 0;
 
 }
@@ -137,7 +139,10 @@ function draw(){
     if(pipe[i].x == 5){
         score++;
         scor.play();
+        
         bestScore = Math.max(bestScore,score);
+        let x = bestScore;
+        localStorage.setItem("bestScore",x);
         
     }
 } 
@@ -165,9 +170,13 @@ function draw(){
 
     requestAnimationFrame(draw);
 }
+function Best(){
+   
+};
 
 window.onload = function(){
     draw();
+   
 };
 
 
