@@ -170,9 +170,7 @@ function draw(){
 
     requestAnimationFrame(draw);
 }
-function Best(){
-   
-};
+
 
 window.onload = function(){
     draw();
