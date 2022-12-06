@@ -72,6 +72,7 @@ document.getElementById("pontos_detail").innerText = score;
 document.getElementById("game_over").style = "display: inline";
 document.getElementById("record").innerText = bestScore;
 gravity = 0;
+
 }
 
 function play_again(){
