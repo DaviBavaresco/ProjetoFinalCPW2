@@ -22,7 +22,7 @@ pipeSouth.src = "IMG/pipeSouth.png";
 
 // começo a criar as ações do jogo
 // altura entre canos
-var gap = 285; 
+var gap = 85; 
 var constant ;
 //posição do padre
 var bX = 10;
@@ -41,8 +41,7 @@ let bestScore = 0;
 
 var fly = new Audio();
 var scor = new Audio();
-const Lose = new Audio();
-Lose.src = "SOM/Lose.mp3";
+
 fly.src = "SOM/fly.mp3";
 scor.src = "SOM/score.mp3"
 
